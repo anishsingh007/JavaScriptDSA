@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insert Element in Array</title>
     <script>
-        function getEl(){
-            let data =[60,20,47,69,37,58,30,32,23];
-        let newEL=document.getElementById('newEl').value
-        newEL = parseInt(newEL)
-        let position = document.getElementById('position').value
-     /*reverse loop*/   for(let i=data.length-1;i>=0;i--){
-            
-            if(i>=position){
-                data[i+1]=data[i]
-                if (i==position){
-                    data[i]=newEL
-
-                }
-            } 
-           
-        } 
-          console.log(data)
-        
+      function getEl() {
+        let data = [60, 20, 47, 69, 37, 58, 30, 32, 23];
+        let newEL = document.getElementById("newEl").value;
+        newEL = parseInt(newEL);
+        let position = document.getElementById("position").value;
+        /*reverse loop*/ for (let i = data.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            data[i + 1] = data[i];
+            if (i == position) {
+              data[i] = newEL;
+            }
+          }
         }
-       
+        console.log(data);
+      }
     </script>
-</head>
-<body>
-    <input type="text" id="position" placeholder="enter position"/>
-    <input type="text" id="newEl" placeholder="enter new element"/>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="enter position" />
+    <input type="text" id="newEl" placeholder="enter new element" />
 
     <button onclick="getEl()">Submit</button>
-</body>
+  </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String using Stack</title>
+</head>
+<body>
+    <input type="text" placeholder="enter element" id="1">
+    <button onclick="push()">Add new element</button>
+    <button onclick="pop()">Remove element</button>
+    <button onclick="display()">Display element</button>
+
+    <script>
+         
+         let data = []
+         let max= 5
+         let cursize=data.length
+        
+         function push(){
+            if (cursize >= max){
+                alert('cannot add new Value' + newEl)
+            }else{
+                let newEl = document.getElementById('1').value
+                data[cursize]= newEl
+                cursize+=1
+                document.getElementById('1').value =''    
+                console.log(data)                
+            }
+
+         }
+
+         function pop(){
+            if (cursize <0){
+                alert('empty stack cannot remove')
+            }else{
+                cursize-=1
+               data.length= cursize
+                
+            }
+           
+         }
+         function display(){
+                for(let i =0;i<data.length;i++){
+                    console.log(data[i])
+                }
+            }
+
+    </script>
+</body>
+</html>

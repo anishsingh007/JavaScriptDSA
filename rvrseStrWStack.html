@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String Using Stack</title>
+</head>
+<h1>Reverse String Using Stack</h1>
+<body>
+
+    <script>
+
+        let data =[1]
+        let currentSize = data.length
+
+
+        function push(newVal){
+            data[currentSize]= newVal
+            currentSize+=1
+        }
+
+        function pop(){
+            lastitem = data[currentSize-1]
+            currentSize--
+           data.length=currentSize
+           return lastitem
+        }
+
+        function reverseString(item){
+
+            for (let i=0;i<item.length;i++){
+                push(item[i])
+                    console.log(item[i])
+            }
+
+            for (let i=0;i<item.length;i++){
+                
+            item[i]=pop()
+            }
+
+           console.log(item.join(''))
+        }
+        let str= 'anish'
+        str = str.split('')
+        console.log(str)
+        reverseString(str)
+    </script>
+
+</body>
+</html>

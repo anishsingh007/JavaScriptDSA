@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <h1>Linear Search Algorithm</h1>
+  <body>
+    <script>
+      let data = [4, 3, 5, 96, 52, 543, 653, 21];
+      let find = 3;
+      let pos;
+      for (let i = 0; i < data.length; i++) {
+        if (data[i] == find) {
+          pos = i;
+          break;
+        }
+      }
+      console.log(pos)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort</title>
+</head>
+<body>
+    <script>
+    let items = [20, 12, 53, 3,56,78,0,5,89,34];
+      function InsertionSort(data) {
+        let i,current,j;
+        for (let i = 0; i < data.length; i++) {
+          current = data[i];
+          j=i-1
+         while(j>=0 && data[j]>current){
+            data[j+1]=data[j];
+            j--
+
+         }
+          data[j+1]=current
+        }
+        console.log(data);
+      }
+      InsertionSort(items)
+    </script>
+</body>
+</html>
